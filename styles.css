@@ -16,6 +16,14 @@ body {
     overflow-x: hidden;
 }
 
+#books__body {
+    background-color: rgba(115, 66, 214, 0.1);
+    display: flex
+;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 html {
     scroll-behavior: smooth;
 }
