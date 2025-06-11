@@ -331,12 +331,17 @@ HIGHLIGHTS
 .book {
     width: calc(100% / 4);
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
  .book__img {
     max-height: 380px;
     transition: all 300ms ease;
-    cursor: no-drop;
+    cursor: not-allowed;
+    object-fit: contain;
+    object-position: left;
  }
 
  .book__img--wrapper {
@@ -418,8 +423,28 @@ select {
     justify-content: center;
     padding-top: 60px;
     font-size: 60px;
+    color: #7342d6;
 }
 
+.books__loading--spinner {
+    display: none !important;
+}
+.books__loading .books__loading--spinner {
+    display: block !important;
+}
+
+.fa-spinner {
+    animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 /* 
 
 EXPLORE 
